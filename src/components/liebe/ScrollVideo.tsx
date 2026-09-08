@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import videoSrc from "@/assets/videos/liebe-background.mp4";
+import videoSrcWebm from "@/assets/videos/liebe-background.webm";
+
 
 /**
  * One shared, scroll-controlled background video for the whole page.
