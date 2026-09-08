@@ -74,13 +74,16 @@ export function ScrollVideo() {
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-background">
       <video
         ref={videoRef}
-        src={videoSrc}
         muted
         playsInline
         preload="auto"
         disablePictureInPicture
         className="absolute inset-0 h-full w-full scale-105 object-cover [filter:brightness(1.06)_saturate(1.05)_contrast(1.02)]"
-      />
+      >
+        <source src={videoSrc} type="video/mp4" />
+        <source src={videoSrcWebm} type="video/webm" />
+      </video>
+
       {/* white luxury integration layers */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_28%,var(--glass-veil)_78%,var(--background)_100%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,var(--background),transparent_22%,transparent_78%,var(--background))]" />
